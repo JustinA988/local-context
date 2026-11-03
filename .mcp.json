@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "local-context": {
+      "command": "python",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/run.py"],
+      "env": {
+        "PYTHONUNBUFFERED": "1",
+        "PYTHONIOENCODING": "utf-8",
+        "LOCAL_CONTEXT_HOME": "${CLAUDE_PLUGIN_ROOT}",
+        "LOCAL_CONTEXT_CONFIG": "${CLAUDE_PLUGIN_ROOT}/config.json",
+        "LOCAL_CONTEXT_PROJECT": "${CLAUDE_PROJECT_DIR}",
+        "LOCAL_CONTEXT_DATA": "${CLAUDE_PLUGIN_DATA}",
+        "LOCAL_CONTEXT_ROOT": "${user_config.root_dir}",
+        "LOCAL_CONTEXT_MAX_CHARS": "${user_config.max_output_chars}",
+        "LOCAL_CONTEXT_ALLOW_SHELL": "${user_config.allow_shell}"
+      }
+    }
+  }
+}

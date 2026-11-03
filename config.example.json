@@ -1,0 +1,24 @@
+{
+  "roots": [],
+  "max_output_chars": 4000,
+  "command_timeout_seconds": 20,
+  "max_rows": 25,
+  "allow_shell": true,
+  "allow_sql_writes": false,
+  "shell": "auto",
+  "extra_deny": [],
+  "sources": [
+    {
+      "name": "notes",
+      "type": "json",
+      "path": "examples/sample.json"
+    }
+  ],
+  "tasks": [
+    {
+      "name": "stamp",
+      "command": "python -c \"print('stamped')\"",
+      "every_seconds": 0
+    }
+  ]
+}

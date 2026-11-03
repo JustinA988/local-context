@@ -1,0 +1,14 @@
+{
+  "sources": [
+    {
+      "name": "sample-json",
+      "type": "json",
+      "path": "examples/sample.json"
+    },
+    {
+      "name": "sample-csv",
+      "type": "csv",
+      "path": "examples/sample.csv"
+    }
+  ]
+}

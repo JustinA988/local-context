@@ -1,0 +1,29 @@
+{
+  "name": "local-context",
+  "displayName": "Local Context",
+  "version": "0.1.0",
+  "description": "Local MCP for files, shell, SQLite, and scheduled tasks. Results are size-capped and the server never calls the Claude API.",
+  "license": "MIT",
+  "keywords": ["mcp", "files", "sqlite", "tasks"],
+  "userConfig": {
+    "root_dir": {
+      "type": "directory",
+      "title": "Allowed root",
+      "description": "Directory the plugin may read and use as the shell working directory. Leave empty to use the current project."
+    },
+    "max_output_chars": {
+      "type": "number",
+      "title": "Max characters per result",
+      "description": "Hard cap on every tool result so one call cannot dump a large file into the context window.",
+      "default": 4000,
+      "min": 500,
+      "max": 16000
+    },
+    "allow_shell": {
+      "type": "boolean",
+      "title": "Allow terminal commands",
+      "description": "Let Claude run commands inside the allowed root. Anthropic environment variables are removed, and commands that target Claude credential files or the Anthropic API are refused.",
+      "default": true
+    }
+  }
+}

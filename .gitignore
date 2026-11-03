@@ -1,0 +1,38 @@
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Local plugin state (may contain machine paths)
+data/
+config.json
+*.sqlite
+*.db
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# OS / editor / Cursor (never commit IDE or agent metadata)
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+.cursor/
+*.code-workspace
+
+# Accidental copies of logs or agent output
+*.log
+agent-tools/
+
+# Local scan script; not part of the public project
+scripts/

@@ -1,0 +1,13 @@
+{
+  "name": "local-context-market",
+  "owner": {
+    "name": "local-context"
+  },
+  "plugins": [
+    {
+      "name": "local-context",
+      "source": "./",
+      "description": "Local MCP for files, shell, SQLite, and scheduled tasks."
+    }
+  ]
+}

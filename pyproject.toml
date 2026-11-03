@@ -1,0 +1,25 @@
+[project]
+name = "local-context"
+version = "0.1.0"
+description = "Local MCP plugin for files, shell, SQLite, and tasks. Results are capped and the server never calls the Claude API."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+local-context = "local_context.__main__:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
